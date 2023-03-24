@@ -3,13 +3,13 @@ import { Text, StyleSheet, Button, View, Image, TouchableOpacity, ScrollView } f
 import { TextInput } from 'react-native-gesture-handler';
 import { ScreenStackHeaderRightView } from 'react-native-screens';
 import '../Assets/images/Mobi2.png';
-import Icon from 'react-native-vector-icons/Feather'
+import BackIcon from 'react-native-vector-icons/Feather'
 
 
-const SignUp = ()=>{
-  
+const SignUp = ({navigation})=>{
+
   function navigate(){
-    navigation.navigate('SignUp');
+    navigation.navigate('SignIn');
   }
     return(
   <View style={styles.mainView}>
@@ -17,7 +17,7 @@ const SignUp = ()=>{
         <Image style={styles.ImageStyle} source={require('../Assets/images/Mobi2.png')} />
     </View>
       <ScrollView style={styles.BottomView}>
-          <Icon name="chevron-left" size={30} color={"red"}/>
+          <BackIcon style={styles.BackIcon} onPress={navigate} name="chevron-left" size={60} color={"#fff"}/>
           <Text style={styles.Heading}>
           CREATE{'\n'}
           ACCOUNT
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
       fontSize:40,
       fontWeight:'bold',
       marginLeft:30,
-      marginTop:60,
+      marginTop:10,
     },
     FormView:{
       width:'100%',
@@ -118,6 +118,10 @@ const styles = StyleSheet.create({
       alignItems:'center',
       marginTop:20,
     },
+    BackIcon:{
+      marginLeft:5,
+      marginTop: 10,
+    }
     
   })
 export default SignUp;
