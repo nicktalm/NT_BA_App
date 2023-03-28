@@ -7,7 +7,7 @@ import '../Assets/images/Mobi2.png';
 const SignIn = ({navigation})=>{
 
   function navigate(){
-    navigation.navigate('SignUp');
+    navigation.navigate('Site1');
   }
 
     return(
@@ -23,13 +23,13 @@ const SignIn = ({navigation})=>{
                 <View style={styles.FormView}>
                   <TextInput placeholder={"Email adress*"} placeholderTextColor="#fff" style={styles.TextInput}></TextInput>
                   <TextInput placeholder={"Password*"} secureTextEntry={true} placeholderTextColor="#fff" style={styles.TextInput}></TextInput>
-                  <TouchableOpacity style={styles.Button}>
+                  <TouchableOpacity style={styles.Button} onPress={navigate}>
                     <Text style={styles.ButtonText}>
                       Sign in
                     </Text>
                   </TouchableOpacity>
                 </View>
-                  <TouchableOpacity style={styles.TextButton} onPress={navigate}>
+                  <TouchableOpacity style={styles.TextButton} >
                     <Text style={styles.SignUpText}>Sign up</Text>
                   </TouchableOpacity>
             </View>
