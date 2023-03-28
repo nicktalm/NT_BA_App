@@ -14,8 +14,8 @@ const App: () => Node = () => {
     <Stack.Navigator>
       <Stack.Screen name="SignIn" component={SignIn} options={{headerShown:false}} />
       <Stack.Screen name="SignUp" component={SignUp} options={{headerShown:false}}/>
-      <Stack.Screen name="Site1" component={Site1} options={{headerShown:false}}/>
-      <Stack.Screen name="Site2" component={Site2} options={{headerShown:false}}/>
+      <Stack.Screen name="Site1" component={Site1} options={{headerShown:true}}/>
+      <Stack.Screen name="Site2" component={Site2} options={{headerShown:true}}/>
     </Stack.Navigator>
   </NavigationContainer>
     );
