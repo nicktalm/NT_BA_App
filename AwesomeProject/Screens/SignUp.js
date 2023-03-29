@@ -29,7 +29,7 @@ const SignUp = ({navigation})=>{
               <TextInput placeholder={"Password*"} placeholderTextColor="#fff" style={styles.TextInput}></TextInput>
               <TextInput placeholder={"Confirm Password*"} secureTextEntry={true} placeholderTextColor="#fff" style={styles.TextInput}></TextInput>
                 <TouchableOpacity style={styles.Button}>
-                  <Text style={styles.ButtonText}>Sign in</Text>
+                  <Text style={styles.ButtonText}>Sign up</Text>
                 </TouchableOpacity>
             </View>
       

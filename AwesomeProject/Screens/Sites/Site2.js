@@ -3,7 +3,7 @@ import { Text, StyleSheet, TouchableOpacity, View } from "react-native";
 import { TextInput } from 'react-native-gesture-handler';
 import { ScreenStackHeaderRightView } from 'react-native-screens';
 
-const SignIn = ({navigation})=>{
+const Site2 = ({navigation})=>{
 
   function navigate(){
     navigation.navigate('SignUp');
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
 
 
   })
-export default SignIn;
+export default Site2;
