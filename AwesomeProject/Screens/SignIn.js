@@ -9,6 +9,9 @@ const SignIn = ({navigation})=>{
   function navigate(){
     navigation.navigate('Home');
   }
+  function navigate2(){
+    navigation.navigate('SignUp');
+  }
 
     return(
         <View style={styles.mainView}>
@@ -29,7 +32,7 @@ const SignIn = ({navigation})=>{
                     </Text>
                   </TouchableOpacity>
                 </View>
-                  <TouchableOpacity style={styles.TextButton} >
+                  <TouchableOpacity style={styles.TextButton} onPress={navigate2}>
                     <Text style={styles.SignUpText}>Sign up</Text>
                   </TouchableOpacity>
             </View>
