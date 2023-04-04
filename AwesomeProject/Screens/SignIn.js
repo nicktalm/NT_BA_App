@@ -7,7 +7,7 @@ import '../Assets/images/Mobi2.png';
 const SignIn = ({navigation})=>{
 
   function navigate(){
-    navigation.navigate('Site1');
+    navigation.navigate('Home');
   }
 
     return(
