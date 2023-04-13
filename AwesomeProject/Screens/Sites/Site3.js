@@ -6,17 +6,17 @@ import ArrowRightIcon from 'react-native-vector-icons/Feather';
 import { Dimensions } from 'react-native';
 import { copyToClipBoard } from '../../function';
 
-const Site2 = ({navigation})=>{
+const Site3 = ({navigation})=>{
 
   /*function navigate(){
     Clipboard.setString('hello world');
     navigation.navigate('Site2');
   }*/
   function navigate(){
-    navigation.navigate('Site3');
+    navigation.navigate('Site4');
   }
   function navigate2(){
-    navigation.navigate('Site1');
+    navigation.navigate('Site2');
   }
   function navigate3(){
     navigation.navigate('Home');
@@ -25,7 +25,7 @@ const Site2 = ({navigation})=>{
     return(
         <ScrollView style={styles.TopView}>
             <View style={styles.HeadlineBox}>
-            <Text style={styles.Headline}>Grundlagen 2</Text>
+            <Text style={styles.Headline}>Grundlagen 3</Text>
             </View>
             <Text style={styles.Fließtext}>Diese App hilft Ihnen bei der Installation und Erstellung Ihrer ersten React Native App.</Text>
             <Text style={styles.Fließtext}>React Native wird von vielen verschiedenen Personen genutzt: von fortgeschrittenen iOS-Entwicklern über React-Anfänger bis hin zu Personen, die zum ersten Mal in ihrer Karriere mit der Programmierung beginnen. Diese Dokumentationen wurden für alle Lernenden geschrieben, unabhängig von ihrem Erfahrungsstand oder Hintergrund.</Text>
@@ -34,9 +34,9 @@ const Site2 = ({navigation})=>{
             </View>
             <View style={styles.kopierTextBox}>
             <Text style={styles.kopierText}>
-              Ich will kopiert werden2
+              Ich will kopiert werden3
             </Text>
-            <TouchableOpacity style={styles.kopierTextButton} onPress={copyToClipBoard('Ich will kopiert werden2')}>
+            <TouchableOpacity style={styles.kopierTextButton} onPress={copyToClipBoard('Ich will kopiert werden3')}>
             <ArrowRightIcon style={styles.kopierTextButton} name="copy" size={35} color={"#fff"}/>
             </TouchableOpacity>
             </View>
@@ -139,4 +139,4 @@ const styles = StyleSheet.create({
       marginTop:3.5,
     }
   })
-export default Site2;
+export default Site3;

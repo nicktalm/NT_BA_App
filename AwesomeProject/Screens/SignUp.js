@@ -2,7 +2,6 @@ import React from "react";
 import { Text, StyleSheet, Button, View, Image, TouchableOpacity, ScrollView } from "react-native";
 import { TextInput } from 'react-native-gesture-handler';
 import { ScreenStackHeaderRightView } from 'react-native-screens';
-import '../Assets/images/Mobi2.png';
 import BackIcon from 'react-native-vector-icons/Feather'
 
 
@@ -11,10 +10,13 @@ const SignUp = ({navigation})=>{
   function navigate(){
     navigation.navigate('SignIn');
   }
+  function navigate2(){
+    navigation.navigate('Home');
+  }
     return(
   <View style={styles.mainView}>
     <View style={styles.TopView}>
-        <Image style={styles.ImageStyle} source={require('../Assets/images/Mobi2.png')} />
+        <Image style={styles.ImageStyle} source={require('../Assets/images/LogoApp.png')} />
     </View>
       <ScrollView style={styles.BottomView}>
           <BackIcon style={styles.BackIcon} onPress={navigate} name="chevron-left" size={60} color={"#fff"}/>
@@ -29,7 +31,7 @@ const SignUp = ({navigation})=>{
               <TextInput placeholder={"Password*"} placeholderTextColor="#fff" style={styles.TextInput}></TextInput>
               <TextInput placeholder={"Confirm Password*"} secureTextEntry={true} placeholderTextColor="#fff" style={styles.TextInput}></TextInput>
                 <TouchableOpacity style={styles.Button}>
-                  <Text style={styles.ButtonText}>Sign up</Text>
+                  <Text style={styles.ButtonText} onPress={navigate2}>Sign up</Text>
                 </TouchableOpacity>
             </View>
       
@@ -62,13 +64,14 @@ const styles = StyleSheet.create({
     BottomView:{
       width:'100%',
       height:'80%',
-      backgroundColor:'#000',
+      backgroundColor:'#03396C',
       borderTopLeftRadius:30,
       borderTopRightRadius:30,
     },
     ImageStyle:{
       width:'50%',
-      resizeMode:'contain'
+      resizeMode:'contain',
+      marginTop:40
     },
     Heading:{
       color:'#fff',
@@ -108,6 +111,7 @@ const styles = StyleSheet.create({
     ButtonText:{
       fontWeight:'bold',
       fontSize:18,
+      color:'#03396C'
     },
     SignUpText:{
       color:'gray',

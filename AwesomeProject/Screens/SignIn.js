@@ -16,7 +16,7 @@ const SignIn = ({navigation})=>{
     return(
         <View style={styles.mainView}>
             <View style={styles.TopView}>
-              <Image style={styles.ImageStyle} source={require('../Assets/images/Mobi2.png')} />
+              <Image style={styles.ImageStyle} source={require('../Assets/images/LogoApp.png')} />
             </View>
             <View style={styles.BottomView}>
                 <Text style={styles.Heading}>
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     BottomView:{
       width:'100%',
       height:'60%',
-      backgroundColor:'#000',
+      backgroundColor:'#03396C',
       borderTopLeftRadius:30,
       borderTopRightRadius:30,
     },
@@ -103,9 +103,10 @@ const styles = StyleSheet.create({
     ButtonText:{
       fontWeight:'bold',
       fontSize:18,
+      color:"#03396C"
     },
     SignUpText:{
-      color:'gray',
+      color:'white',
     },
     TextButton:{
       width:'100%',

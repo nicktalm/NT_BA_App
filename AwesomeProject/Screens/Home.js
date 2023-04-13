@@ -13,9 +13,10 @@ const Home = ({navigation})=>{
   function navigate2(){
     navigation.navigate('SignIn');
   }
-
+  
     return(
         <ScrollView style={styles.TopView}>
+           <View style={styles.ButtonBox}>
            <TouchableOpacity style={styles.Button} /*</ScrollView>onPress={navigate}*/>
                 <Text style={styles.ButtonText}>Über mich</Text>
             </TouchableOpacity>
@@ -25,18 +26,23 @@ const Home = ({navigation})=>{
             <TouchableOpacity style={styles.Button} onPress={navigate2}>
                 <Text style={styles.ButtonText}>Abmelden</Text>
             </TouchableOpacity>
+            </View>
         </ScrollView>
         
     )
 }
 const styles = StyleSheet.create({
     TopView:{
-      marginTop:70,
-      paddingLeft:30,
-      paddingRight:20,
+      marginTop:0,
+      backgroundColor:'#03396C'
     },
+    ButtonBox:{
+        marginTop:70,
+        marginLeft:40,
+        marginRight:40,
+      },
     Button:{
-        width:'90%',
+        width:'100%',
         color:"#000",
         height:52,
         backgroundColor:"#fff",
