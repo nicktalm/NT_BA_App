@@ -28,7 +28,6 @@ const Home = ({navigation})=>{
             </TouchableOpacity>
             </View>
         </ScrollView>
-        
     )
 }
 const styles = StyleSheet.create({

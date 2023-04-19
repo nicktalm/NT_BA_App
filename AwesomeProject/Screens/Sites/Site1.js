@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, StyleSheet, TouchableOpacity, View, ScrollView, Image } from "react-native";
 import { TextInput } from 'react-native-gesture-handler';
 import { ScreenStackHeaderRightView } from 'react-native-screens';
-import ArrowRightIcon from 'react-native-vector-icons/Feather';
+import Icon from 'react-native-vector-icons/Feather';
 import { Dimensions } from 'react-native';
 import { copyToClipBoard } from '../../function';
 
@@ -36,19 +36,19 @@ const Site1 = ({navigation})=>{
             <Text style={styles.kopierText}>
               Ich will kopiert werden
             </Text>
-            <TouchableOpacity style={styles.kopierTextButton} onPress={copyToClipBoard('Ich will kopiert werden')}>
-            <ArrowRightIcon style={styles.kopierTextButton} name="copy" size={35} color={"#fff"}/>
+            <TouchableOpacity style={styles.kopierTextButton} onPress={copyToClipBoard.bind(this,"Ich will kopiert werden")}>
+            <Icon style={styles.kopierTextButton} name="copy" size={35} color={"#fff"}/>
             </TouchableOpacity>
             </View>
             <View style={styles.ForwardbuttonBox}>
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate2}>
-            <ArrowRightIcon style={styles.ArrowRightIcon} name="arrow-left" size={45} color={"#fff"}/>
+            <Icon style={styles.ArrowRightIcon} name="arrow-left" size={45} color={"#fff"}/>
             </TouchableOpacity>
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate3}>
-            <ArrowRightIcon style={styles.ArrowRightIcon} name="home" size={45} color={"#fff"}/>
+            <Icon style={styles.ArrowRightIcon} name="home" size={45} color={"#fff"}/>
             </TouchableOpacity>
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate}>
-            <ArrowRightIcon style={styles.ArrowRightIcon} name="arrow-right" size={45} color={"#fff"}/>
+            <Icon style={styles.ArrowRightIcon} name="arrow-right" size={45} color={"#fff"}/>
             </TouchableOpacity>
             </View>
         </ScrollView>
@@ -105,12 +105,12 @@ const styles = StyleSheet.create({
       marginTop:20,
       width:'50%',
       resizeMode:'contain',
-      paddingLeft:30,
-      paddingRight:30,
+      marginLeft:30,
+      marginRight:30,
     },
     ImageStyleBild:{
-      width:300,
-      height:300,
+      width:Dimensions.get("window").width-60,
+      height:Dimensions.get("window").width-60,
       resizeMode:'contain'
     },
     kopierTextBox:{
