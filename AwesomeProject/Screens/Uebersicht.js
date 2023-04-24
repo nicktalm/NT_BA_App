@@ -8,34 +8,50 @@ import '/Users/nicktalmon/Desktop/Test1/Test1/AwesomeProject/Assets/images/Mobi2
 const Home = ({navigation})=>{
 
   function navigate(){
-    navigation.navigate('Site1');
+    navigation.navigate('Home');
   }
   function navigate2(){
-    navigation.navigate('SignIn');
+    navigation.navigate('Site1');
   }
   function navigate3(){
-    navigation.navigate('Uebersicht');
+    navigation.navigate('Site2');
   }
   function navigate4(){
-    navigation.navigate('Test');
+    navigation.navigate('Site3');
   }
+  function navigate5(){
+    navigation.navigate('Site4');
+  }
+  function navigate6(){
+    navigation.navigate('Site5');
+  }
+  function navigate7(){
+    navigation.navigate('Site6');
+  }
+  
     return(
         <ScrollView style={styles.TopView}>
            <View style={styles.ButtonBox}>
-           <TouchableOpacity style={styles.Button} /*</ScrollView>onPress={navigate}*/>
-                <Text style={styles.ButtonText}>Über mich</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.Button} onPress={navigate}>
-                <Text style={styles.ButtonText}>Tutorial starten</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.Button} onPress={navigate3}>
-                <Text style={styles.ButtonText}>Tutorial Übersicht</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.Button} onPress={navigate4}>
-                <Text style={styles.ButtonText}>Testen</Text>
+           <TouchableOpacity style={styles.Button} onPress={navigate}>
+                <Text style={styles.ButtonText}>Home</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.Button} onPress={navigate2}>
-                <Text style={styles.ButtonText}>Abmelden</Text>
+                <Text style={styles.ButtonText}>Einrichten der Entwicklungsumgebung</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.Button} onPress={navigate3}>
+                <Text style={styles.ButtonText}>Node & Watchman</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.Button} onPress={navigate4}>
+                <Text style={styles.ButtonText}>Ruby</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.Button} onPress={navigate5}>
+                <Text style={styles.ButtonText}>Xcode</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.Button} onPress={navigate6}>
+                <Text style={styles.ButtonText}>Erstellen einer neuen Anwendung</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.Button} onPress={navigate7}>
+                <Text style={styles.ButtonText}>Ausführen Ihrer React Native-Anwendung</Text>
             </TouchableOpacity>
             </View>
         </ScrollView>

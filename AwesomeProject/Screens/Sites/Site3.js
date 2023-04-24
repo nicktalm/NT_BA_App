@@ -5,7 +5,7 @@ import { ScreenStackHeaderRightView } from 'react-native-screens';
 import Icon from 'react-native-vector-icons/Feather';
 import { Dimensions } from 'react-native';
 import { copyToClipBoard } from '../../function';
-
+import { Linking } from 'react-native';
 
 const Site3 = ({navigation})=>{
 
@@ -26,21 +26,32 @@ const Site3 = ({navigation})=>{
     return(
         <ScrollView style={styles.TopView}>
             <View style={styles.HeadlineBox}>
-            <Text style={styles.Headline}>Grundlagen 3</Text>
+            <Text style={styles.Headline}>Ruby</Text>
             </View>
-            <Text style={styles.Fließtext}>Diese App hilft Ihnen bei der Installation und Erstellung Ihrer ersten React Native App.</Text>
-            <Text style={styles.Fließtext}>React Native wird von vielen verschiedenen Personen genutzt: von fortgeschrittenen iOS-Entwicklern über React-Anfänger bis hin zu Personen, die zum ersten Mal in ihrer Karriere mit der Programmierung beginnen. Diese Dokumentationen wurden für alle Lernenden geschrieben, unabhängig von ihrem Erfahrungsstand oder Hintergrund.</Text>
-            <View style={styles.ImageStyle}>
-            <Image style={styles.ImageStyleBild} source={require('/Users/nicktalmon/Desktop/Test1/Test1/AwesomeProject/Assets/images/LogoApp.png')} />
-            </View>
+            <Text style={styles.Fließtext}> 
+            <Text style={{color: '#03396C'}} onPress={() => Linking.openURL('https://www.ruby-lang.org/en/')}>
+            Ruby&nbsp;
+            </Text>
+            ist eine Allzweck-Programmiersprache. React Native verwendet sie in einigen Skripten, die mit der iOS-Abhängigkeitsverwaltung zusammenhängen. Wie jede Programmiersprache gibt es auch von Ruby verschiedene Versionen, die im Laufe der Jahre entwickelt wurden.</Text>
+            <Text style={styles.Fließtext}> 
+            React Native verwendet eine .ruby-Versionsdatei, um sicherzustellen, dass Ihre Ruby-Version mit der benötigten Version übereinstimmt. Derzeit wird macOS 13.2 mit Ruby 2.6.10 ausgeliefert, was für diese Version von React Native (2.7.6) nicht erforderlich ist. Wir empfehlen, einen Ruby-Versionsmanager zu installieren und die richtige Version von Ruby in Ihrem System zu installieren.</Text>
+            <Text style={styles.Fließtext}> 
+            Um die aktuelle Version von Ruby zu überprüfen, können Sie diesen Befehl ausführen:
+            </Text>
             <View style={styles.kopierTextBox}>
             <Text style={styles.kopierText}>
-              Ich will kopiert werden3
+            ruby --version
             </Text>
-            <TouchableOpacity style={styles.kopierTextButton} onPress={copyToClipBoard.bind(this,"Ich will kopiert werden3")}>
+            <TouchableOpacity style={styles.kopierTextButton} onPress={copyToClipBoard.bind(this,"ruby --version")}>
             <Icon style={styles.kopierTextButton} name="copy" size={35} color={"#fff"}/>
             </TouchableOpacity>
             </View>
+            <Text style={styles.Fließtext}> 
+            React Native verwendet&nbsp;
+            <Text style={{color: '#03396C',}} onPress={() => Linking.openURL('https://github.com/facebook/react-native/blob/v0.71.3/.ruby-version')}>
+            diese Version&nbsp;
+            </Text>von Ruby. Sie können die Version, die Ihr spezifisches Projekt benötigt, auch in der Datei .ruby-version im Stammverzeichnis Ihres ReactNative-Projekts finden.
+            </Text>
             <View style={styles.ForwardbuttonBox}>
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate2}>
             <Icon style={styles.ArrowRightIcon} name="arrow-left" size={45} color={"#fff"}/>
@@ -51,6 +62,9 @@ const Site3 = ({navigation})=>{
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate}>
             <Icon style={styles.ArrowRightIcon} name="arrow-right" size={45} color={"#fff"}/>
             </TouchableOpacity>
+            </View>
+            <View style={styles.ImageStyle}>
+            <Image style={styles.ImageStyleBild} source={require('/Users/nicktalmon/Desktop/Test1/Test1/AwesomeProject/Assets/images/LogoApp.png')} />
             </View>
         </ScrollView>
     )
@@ -67,9 +81,9 @@ const styles = StyleSheet.create({
       marginTop:20,
     },
     Headline:{
-      fontSize:30,
+      fontSize:28,
       fontWeight:'bold',
-      color:'blue'
+      color:'#03396C'
     },
     Fließtext:{
       marginBottom:15,
@@ -115,29 +129,29 @@ const styles = StyleSheet.create({
       resizeMode:'contain'
     },
     kopierTextBox:{
-      marginTop:30,
-      backgroundColor:'blue',
-      height:50,
-      display:'flex',
-      alignItems:'flex-start',
-      justifyContent:'flex-start',
-      flexDirection:'row',
-      justifyContent:'space-between',
-      borderRadius:10,
-      marginBottom:20,
-      paddingLeft:30,
-      paddingRight:30,
-      marginLeft:10,
-      marginRight:10
-    },
-    kopierText:{
-      color:'white',
+        marginTop:10,
+        backgroundColor:'#03396C',
+        height:50,
+        display:'flex',
+        alignItems:'flex-start',
+        justifyContent:'flex-start',
+        flexDirection:'row',
+        justifyContent:'space-between',
+        borderRadius:10,
+        marginBottom:20,
+        paddingLeft:20,
+      paddingRight:20,
       marginLeft:20,
-      marginTop:15,
-    },
-    kopierTextButton:{
-      marginRight:10,
-      marginTop:3.5,
-    }
+      marginRight:20
+      },
+      kopierText:{
+        color:'white',
+        marginLeft:0,
+        marginTop:15,
+      },
+      kopierTextButton:{
+        marginRight:0,
+        marginTop:3.5,
+      }
   })
 export default Site3;

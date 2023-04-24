@@ -29,20 +29,6 @@ const Site1 = ({navigation})=>{
             <Text style={styles.Fließtext}>React Native wird von vielen verschiedenen Personen genutzt: von fortgeschrittenen iOS-Entwicklern über React-Anfänger bis hin zu Personen, die zum ersten Mal in ihrer Karriere mit der Programmierung beginnen. Diese Tutorial wurden für alle Lernenden geschrieben, unabhängig von ihrem Erfahrungsstand oder Hintergrund.</Text>
             <Text style={styles.Fließtext}>Wir werden mit React Native CLI arbeiten. Für den Start ist Xcode erforderlich. Wenn Sie bereits eines dieser Tools installiert haben, sollten Sie in der Lage sein, innerhalb weniger Minuten loszulegen. Wenn sie nicht installiert sind, sollten Sie etwa eine Stunde für die Installation und Konfiguration einplanen.</Text>
             <Text style={styles.Fließtext}>In diesem Tutorial geht es um eine Entwicklung mit einem MacOS Gerät für ein iOS Gerät.</Text>
-            <View style={styles.ImageStyle}>
-            <Image style={styles.ImageStyleBild} source={require('/Users/nicktalmon/Desktop/Test1/Test1/AwesomeProject/Assets/images/LogoApp.png')} />
-            </View>
-            <Text style={{color: '#03396C'}} onPress={() => Linking.openURL('http://google.com')}>
-              Google
-            </Text>
-            <View style={styles.kopierTextBox}>
-            <Text style={styles.kopierText}>
-              Ich will kopiert werden
-            </Text>
-            <TouchableOpacity style={styles.kopierTextButton} onPress={copyToClipBoard.bind(this,"Ich will kopiert werden")}>
-            <Icon style={styles.kopierTextButton} name="copy" size={35} color={"#fff"}/>
-            </TouchableOpacity>
-            </View>
             <View style={styles.ForwardbuttonBox}>
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate2}>
             <Icon style={styles.ArrowRightIcon} name="arrow-left" size={40} color={"#fff"}/>
@@ -70,7 +56,7 @@ const styles = StyleSheet.create({
       height:100,
     },
     Headline:{
-      fontSize:30,
+      fontSize:28,
       fontWeight:'bold',
       color:'#03396C',
     },
@@ -93,7 +79,8 @@ const styles = StyleSheet.create({
       paddingLeft:30,
       paddingRight:30,
       marginLeft:10,
-      marginRight:10
+      marginRight:10,
+      marginTop:20,
     },
     Forwardbutton:{
       width:'25%',

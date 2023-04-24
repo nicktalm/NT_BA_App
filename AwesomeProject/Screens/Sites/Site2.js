@@ -5,6 +5,7 @@ import { ScreenStackHeaderRightView } from 'react-native-screens';
 import Icon from 'react-native-vector-icons/Feather';
 import { Dimensions } from 'react-native';
 import { copyToClipBoard } from '../../function';
+import { Linking } from 'react-native';
 
 const Site2 = ({navigation})=>{
 
@@ -25,21 +26,28 @@ const Site2 = ({navigation})=>{
     return(
         <ScrollView style={styles.TopView}>
             <View style={styles.HeadlineBox}>
-            <Text style={styles.Headline}>Grundlagen 2</Text>
+            <Text style={styles.Headline}>Node & Watchman</Text>
             </View>
-            <Text style={styles.Fließtext}>Diese App hilft Ihnen bei der Installation und Erstellung Ihrer ersten React Native App.</Text>
-            <Text style={styles.Fließtext}>React Native wird von vielen verschiedenen Personen genutzt: von fortgeschrittenen iOS-Entwicklern über React-Anfänger bis hin zu Personen, die zum ersten Mal in ihrer Karriere mit der Programmierung beginnen. Diese Dokumentationen wurden für alle Lernenden geschrieben, unabhängig von ihrem Erfahrungsstand oder Hintergrund.</Text>
-            <View style={styles.ImageStyle}>
-            <Image style={styles.ImageStyleBild} source={require('/Users/nicktalmon/Desktop/Test1/Test1/AwesomeProject/Assets/images/LogoApp.png')} />
-            </View>
-            <View style={styles.kopierTextBox}>
-            <Text style={styles.kopierText}>
-              Ich will kopiert werden2
+            <Text style={styles.Fließtext}>Ich empfehlen die Installation von Node und Watchman mit&nbsp; 
+            <Text style={{color: '#03396C'}} onPress={() => Linking.openURL('https://brew.sh')}>
+            Homebrew
             </Text>
-            <TouchableOpacity style={styles.kopierTextButton} onPress={copyToClipBoard.bind(this,"Ich will kopiert werden2")}>
-            <Icon style={styles.kopierTextButton} name="copy" size={35} color={"#fff"}/>
+            . Führen Sie die folgenden Befehle in einem Terminal aus, nachdem Sie Homebrew installiert haben:</Text>
+            <View style={styles.kopierTextBox2}>
+            <Text style={styles.kopierText2}>
+            brew install node{'\n'}
+            brew install watchman
+            </Text>
+            <TouchableOpacity style={styles.kopierTextButton2} onPress={copyToClipBoard.bind(this,"brew install node brew install watchman")}>
+            <Icon style={styles.kopierTextButton2} name="copy" size={35} color={"#fff"}/>
             </TouchableOpacity>
             </View>
+            <Text style={styles.Fließtext}>Wenn Sie Node bereits auf Ihrem System installiert haben, vergewissern Sie sich, dass es sich um Node 14 oder eine neuere Version handelt.</Text>
+            <Text style={styles.Fließtext}> 
+            <Text style={{color: '#03396C'}} onPress={() => Linking.openURL('https://facebook.github.io/watchman/')}>
+            Watchman&nbsp;
+            </Text>
+            ist ein Tool von Facebook zur Überwachung von Änderungen im Dateisystem. Es wird dringend empfohlen, es zu installieren, um die Leistung zu verbessern.</Text>
             <View style={styles.ForwardbuttonBox}>
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate2}>
             <Icon style={styles.ArrowRightIcon} name="arrow-left" size={45} color={"#fff"}/>
@@ -66,9 +74,9 @@ const styles = StyleSheet.create({
       marginTop:20,
     },
     Headline:{
-      fontSize:30,
+      fontSize:28,
       fontWeight:'bold',
-      color:'blue'
+      color:'#03396C'
     },
     Fließtext:{
       marginBottom:15,
@@ -113,10 +121,10 @@ const styles = StyleSheet.create({
       height:Dimensions.get("window").width-60,
       resizeMode:'contain'
     },
-    kopierTextBox:{
-      marginTop:30,
-      backgroundColor:'blue',
-      height:50,
+    kopierTextBox2:{
+      marginTop:10,
+      backgroundColor:'#03396C',
+      height:65,
       display:'flex',
       alignItems:'flex-start',
       justifyContent:'flex-start',
@@ -124,19 +132,19 @@ const styles = StyleSheet.create({
       justifyContent:'space-between',
       borderRadius:10,
       marginBottom:20,
-      paddingLeft:30,
-      paddingRight:30,
-      marginLeft:10,
-      marginRight:10
-    },
-    kopierText:{
-      color:'white',
+      paddingLeft:20,
+      paddingRight:20,
       marginLeft:20,
+      marginRight:20
+    },
+    kopierText2:{
+      color:'white',
+      marginLeft:0,
       marginTop:15,
     },
-    kopierTextButton:{
-      marginRight:10,
-      marginTop:3.5,
+    kopierTextButton2:{
+      marginRight:0,
+      marginTop:7.5,
     }
   })
 export default Site2;
