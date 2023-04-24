@@ -16,10 +16,14 @@ const App: () => Node = () => {
     <Stack.Navigator>
       <Stack.Screen name="SignIn" component={SignIn} options={{headerShown:false}} />
       <Stack.Screen name="SignUp" component={SignUp} options={{headerShown:false}}/>
-      <Stack.Screen name="Site1" component={Site1} options={{headerShown:false}}/>
-      <Stack.Screen name="Site2" component={Site2} options={{headerShown:false}}/>
-      <Stack.Screen name="Site3" component={Site3} options={{headerShown:false}}/>
-      <Stack.Screen name="Home" component={Home} options={{headerShown:false}}/>
+      <Stack.Screen name="Site1" component={Site1} options={{headerShown:true, title:'Seite 1', headerTintColor:'white',
+            headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:false}} />
+      <Stack.Screen name="Site2" component={Site2} options={{headerShown:true, title:'Seite 2', headerTintColor:'white',
+            headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:false}} />
+      <Stack.Screen name="Site3" component={Site3} options={{headerShown:true, title:'Seite 3', headerTintColor:'white',
+            headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:false}} />
+      <Stack.Screen name="Home" component={Home} options={{headerShown:true, title:'Home', headerTintColor:'white',
+            headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:false}} />
     </Stack.Navigator>
   </NavigationContainer>
     );

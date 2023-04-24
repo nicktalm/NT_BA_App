@@ -2,9 +2,10 @@ import React from 'react';
 import { Text, StyleSheet, TouchableOpacity, View, ScrollView, Image } from "react-native";
 import { TextInput } from 'react-native-gesture-handler';
 import { ScreenStackHeaderRightView } from 'react-native-screens';
-import ArrowRightIcon from 'react-native-vector-icons/Feather';
+import Icon from 'react-native-vector-icons/Feather';
 import { Dimensions } from 'react-native';
 import { copyToClipBoard } from '../../function';
+
 
 const Site3 = ({navigation})=>{
 
@@ -36,19 +37,19 @@ const Site3 = ({navigation})=>{
             <Text style={styles.kopierText}>
               Ich will kopiert werden3
             </Text>
-            <TouchableOpacity style={styles.kopierTextButton} onPress={copyToClipBoard('Ich will kopiert werden3')}>
-            <ArrowRightIcon style={styles.kopierTextButton} name="copy" size={35} color={"#fff"}/>
+            <TouchableOpacity style={styles.kopierTextButton} onPress={copyToClipBoard.bind(this,"Ich will kopiert werden3")}>
+            <Icon style={styles.kopierTextButton} name="copy" size={35} color={"#fff"}/>
             </TouchableOpacity>
             </View>
             <View style={styles.ForwardbuttonBox}>
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate2}>
-            <ArrowRightIcon style={styles.ArrowRightIcon} name="arrow-left" size={45} color={"#fff"}/>
+            <Icon style={styles.ArrowRightIcon} name="arrow-left" size={45} color={"#fff"}/>
             </TouchableOpacity>
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate3}>
-            <ArrowRightIcon style={styles.ArrowRightIcon} name="home" size={45} color={"#fff"}/>
+            <Icon style={styles.ArrowRightIcon} name="home" size={45} color={"#fff"}/>
             </TouchableOpacity>
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate}>
-            <ArrowRightIcon style={styles.ArrowRightIcon} name="arrow-right" size={45} color={"#fff"}/>
+            <Icon style={styles.ArrowRightIcon} name="arrow-right" size={45} color={"#fff"}/>
             </TouchableOpacity>
             </View>
         </ScrollView>
@@ -63,7 +64,7 @@ const styles = StyleSheet.create({
       paddingLeft:30,
       paddingRight:30,
       height:50,
-      marginTop:70,
+      marginTop:20,
     },
     Headline:{
       fontSize:30,
@@ -79,28 +80,28 @@ const styles = StyleSheet.create({
       
     },
     ForwardbuttonBox:{
-      display:'flex',
-      flexDirection:'row',
-      justifyContent:'space-between',
-      backgroundColor:'#03396C',
-      height:120,
-      borderRadius:50,
-      paddingLeft:30,
-      paddingRight:30,
-      marginLeft:10,
-      marginRight:10
-    },
-    Forwardbutton:{
-      width:'25%',
-      color:"#fff",
-      height:60,
-      backgroundColor:'lightblue',
-      borderRadius:10,
-      marginTop:30,
-      display:'flex',
-      justifyContent:'center',
-      alignItems:"center",
-    },
+        display:'flex',
+        flexDirection:'row',
+        justifyContent:'space-between',
+        backgroundColor:'#03396C',
+        height:80,
+        borderRadius:50,
+        paddingLeft:30,
+        paddingRight:30,
+        marginLeft:10,
+        marginRight:10
+      },
+      Forwardbutton:{
+        width:'25%',
+        color:"#fff",
+        height:50,
+        backgroundColor:'lightblue',
+        borderRadius:10,
+        marginTop:15,
+        display:'flex',
+        justifyContent:'center',
+        alignItems:"center",
+      },
     ImageStyle:{
       marginTop:20,
       width:'50%',
@@ -109,8 +110,8 @@ const styles = StyleSheet.create({
       paddingRight:30,
     },
     ImageStyleBild:{
-      width:300,
-      height:300,
+        width:Dimensions.get("window").width-60,
+        height:Dimensions.get("window").width-60,
       resizeMode:'contain'
     },
     kopierTextBox:{

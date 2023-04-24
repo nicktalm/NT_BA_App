@@ -23,6 +23,9 @@ const Home = ({navigation})=>{
             <TouchableOpacity style={styles.Button} onPress={navigate}>
                 <Text style={styles.ButtonText}>Tutorial starten</Text>
             </TouchableOpacity>
+            <TouchableOpacity style={styles.Button} onPress={navigate}>
+                <Text style={styles.ButtonText}>Tutorial Übersicht</Text>
+            </TouchableOpacity>
             <TouchableOpacity style={styles.Button} onPress={navigate2}>
                 <Text style={styles.ButtonText}>Abmelden</Text>
             </TouchableOpacity>
@@ -36,7 +39,7 @@ const styles = StyleSheet.create({
       backgroundColor:'#03396C'
     },
     ButtonBox:{
-        marginTop:70,
+        marginTop:20,
         marginLeft:40,
         marginRight:40,
       },
