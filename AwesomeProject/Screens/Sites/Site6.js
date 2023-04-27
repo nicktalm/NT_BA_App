@@ -29,56 +29,50 @@ const Site6 = ({navigation})=>{
             <Text style={styles.Headline}>Ausführen Ihrer{'\n'}
             React Native-Anwendung</Text>
             </View>
-            <Text style={styles.Fließtext}>
-            Sie können die integrierte Kommandozeile von React Native verwenden, um ein neues Projekt zu erstellen. Lassen Sie uns ein neues React Native-Projekt mit dem Namen "TestProject" erstellen:
-            </Text>
-            <View style={styles.kopierTextBox2}>
-            <Text style={styles.kopierText2}>
-            npx react-native@latest{'\n'}
-            init TestProject
-            </Text>
-            <TouchableOpacity style={styles.kopierTextButton2} onPress={copyToClipBoard.bind(this,"npx react-native@latest init TestProject")}>
-            <Icon style={styles.kopierTextButton2} name="copy" size={35} color={"#fff"}/>
-            </TouchableOpacity>
-            </View>
             <Text style={styles.FließtextHeadline}> 
-            Info:</Text>
-            <Text style={styles.Fließtext}> 
-            Wenn Sie Probleme mit iOS haben, versuchen Sie, die Abhängigkeiten neu zu installieren, indem Sie folgende Befehle im Terminal ausführen:
+            Schritt 1: Metro starten
             </Text>
+            <Text style={styles.Fließtext}>
+            Zunächst müssen Sie Metro starten, den JavaScript-Bundler, der mit React Native ausgeliefert wird. Metro "nimmt eine Eingabedatei und verschiedene Optionen entgegen und gibt eine einzelne JavaScript-Datei zurück, die Ihren gesamten Code und seine Abhängigkeiten enthält." -
+            <Text style={{color: '#03396C',}} onPress={() => Linking.openURL('https://facebook.github.io/metro/docs/concepts/')}>
+            &nbsp;Metro Docs
+            </Text>
+            </Text>
+            
             <Text style={styles.Fließtext}> 
-            1. cd ios, um zum richtigen Verzeichnis zu kommen:
+            Um Metro zu starten, führen Sie "npx react-native start" in Ihrem React Native-Projektordner aus:
             </Text>
             <View style={styles.kopierTextBox}>
             <Text style={styles.kopierText}>
-            cd ios
+            npx react-native start
             </Text>
-            <TouchableOpacity style={styles.kopierTextButton} onPress={copyToClipBoard.bind(this,"cd ios")}>
+            <TouchableOpacity style={styles.kopierTextButton} onPress={copyToClipBoard.bind(this,"npx react-native start")}>
             <Icon style={styles.kopierTextButton} name="copy" size={35} color={"#fff"}/>
             </TouchableOpacity>
             </View>
+            <Text style={styles.FließtextHeadline}> 
+            Schritt 2: Starten Sie Ihre Anwendung
+            </Text>
             <Text style={styles.Fließtext}> 
-            2. bundle install, um Bundle zu installieren
+            Lassen Sie Metro Bundler in seinem eigenen Terminal laufen. Öffnen Sie ein neues Terminal in Ihrem React Native-Projektordner. Führen Sie das Folgende aus:
             </Text>
             <View style={styles.kopierTextBox}>
             <Text style={styles.kopierText}>
-            bundle install
+            npx react-native run-ios
             </Text>
             <TouchableOpacity style={styles.kopierTextButton} onPress={copyToClipBoard.bind(this,"bundle install")}>
             <Icon style={styles.kopierTextButton} name="copy" size={35} color={"#fff"}/>
             </TouchableOpacity>
             </View>
             <Text style={styles.Fließtext}> 
-            3. bundle exec pod install, um die iOS-Abhängigkeiten zu installieren.
+            Sie sollten Ihre neue App in Kürze im iOS-Simulator ausführen können.
             </Text>
-            <View style={styles.kopierTextBox}>
-            <Text style={styles.kopierText}>
-            bbundle exec pod install
-            </Text>
-            <TouchableOpacity style={styles.kopierTextButton} onPress={copyToClipBoard.bind(this,"bundle exec pod install")}>
-            <Icon style={styles.kopierTextButton} name="copy" size={35} color={"#fff"}/>
-            </TouchableOpacity>
+            <View style={styles.ImageStyle}>
+            <Image style={styles.ImageStyleBild} source={require('/Users/nicktalmon/Desktop/Test1/Test1/AwesomeProject/Assets/images/ReactNativeiPhone.png')} />
             </View>
+            <Text style={styles.Fließtext}> 
+            npx react-native run-ios ist eine Möglichkeit, Ihre App auszuführen. Sie können sie auch direkt in Xcode ausführen.
+            </Text>
             <View style={styles.ForwardbuttonBox}>
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate2}>
             <Icon style={styles.ArrowRightIcon} name="arrow-left" size={45} color={"#fff"}/>
@@ -121,7 +115,7 @@ const styles = StyleSheet.create({
         paddingRight:30,
         fontWeight:'bold',
         fontSize:18,
-        marginTop:10
+        marginTop:0,
     },
     ArrowRightIcon:{
       
@@ -160,7 +154,9 @@ const styles = StyleSheet.create({
     ImageStyleBild:{
         width:Dimensions.get("window").width,
         height:Dimensions.get("window").width,
-      resizeMode:'contain'
+      resizeMode:'contain',
+      marginTop:80,
+      marginBottom:80
     },
     kopierTextBox2:{
         marginTop:10,

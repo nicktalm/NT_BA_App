@@ -37,7 +37,7 @@ const App: () => Node = () => {
       <Stack.Screen name="Home" component={Home} options={{headerShown:true, title:'Home', headerTintColor:'white',
             headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:false}} />
       <Stack.Screen name="Uebersicht" component={Uebersicht} options={{headerShown:true, title:'Übersicht', headerTintColor:'white',
-            headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:false}} />
+            headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:true}} />
       <Stack.Screen name="Test" component={Test} options={{headerShown:true, title:'Test', headerTintColor:'white',
             headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:true}} />
      </Stack.Navigator>
