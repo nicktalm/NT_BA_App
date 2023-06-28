@@ -3,7 +3,6 @@ import { Text, StyleSheet, TouchableOpacity, View, ScrollView, Image } from "rea
 import { TextInput } from 'react-native-gesture-handler';
 import { ScreenStackHeaderRightView } from 'react-native-screens';
 import ArrowRightIcon from 'react-native-vector-icons/Feather';
-import '/Users/nicktalmon/Desktop/Test1/Test1/AwesomeProject/Assets/images/Mobi2.png';
 
 const Home = ({navigation})=>{
 
@@ -17,12 +16,18 @@ const Home = ({navigation})=>{
     navigation.navigate('Uebersicht');
   }
   function navigate4(){
-    navigation.navigate('Test');
+    navigation.navigate('TestUebersicht');
+  }
+  function navigate5(){
+    navigation.navigate('MedienUebersicht');
+  }
+  function navigate6(){
+    navigation.navigate('Ueber_mich');
   }
     return(
         <ScrollView style={styles.TopView}>
            <View style={styles.ButtonBox}>
-           <TouchableOpacity style={styles.Button} /*</ScrollView>onPress={navigate}*/>
+           <TouchableOpacity style={styles.Button}  onPress={navigate6}>
                 <Text style={styles.ButtonText}>Über mich</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.Button} onPress={navigate}>
@@ -31,8 +36,11 @@ const Home = ({navigation})=>{
             <TouchableOpacity style={styles.Button} onPress={navigate3}>
                 <Text style={styles.ButtonText}>Tutorial Übersicht</Text>
             </TouchableOpacity>
+            <TouchableOpacity style={styles.Button} onPress={navigate5}>
+                <Text style={styles.ButtonText}>Medien einbinden Übersicht</Text>
+            </TouchableOpacity>
             <TouchableOpacity style={styles.Button} onPress={navigate4}>
-                <Text style={styles.ButtonText}>Testen</Text>
+                <Text style={styles.ButtonText}>Flexbox-Testen Übersicht</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.Button} onPress={navigate2}>
                 <Text style={styles.ButtonText}>Abmelden</Text>

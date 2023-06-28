@@ -3,48 +3,40 @@ import { Text, StyleSheet, TouchableOpacity, View, ScrollView, Image } from "rea
 import { TextInput } from 'react-native-gesture-handler';
 import { ScreenStackHeaderRightView } from 'react-native-screens';
 import ArrowRightIcon from 'react-native-vector-icons/Feather';
+import '/Users/nicktalmon/Desktop/Test1/Test1/AwesomeProject/Assets/images/Mobi2.png';
+import { Linking } from 'react-native';
 
 const Home = ({navigation})=>{
 
+  function navigate1(){
+    navigation.navigate('Test_FlexDirection');
+  }
   function navigate2(){
-    navigation.navigate('Site1');
+    navigation.navigate('Test_JustifyContent');
   }
   function navigate3(){
-    navigation.navigate('Site2');
+    navigation.navigate('Test_AlignItems');
   }
   function navigate4(){
-    navigation.navigate('Site3');
-  }
-  function navigate5(){
-    navigation.navigate('Site4');
-  }
-  function navigate6(){
-    navigation.navigate('Site5');
-  }
-  function navigate7(){
-    navigation.navigate('Site6');
+    navigation.navigate('Test_AlignSelf');
   }
   
     return(
         <ScrollView style={styles.TopView}>
+           <Text style={styles.Fließtext}>Eine komplettte Übersicht zum Thema Flexbox finden Sie <Text style={{color: 'lightblue',}} onPress={() => Linking.openURL('https://reactnative.dev/docs/flexbox')}>
+            hier</Text>.</Text>
            <View style={styles.ButtonBox}>
+           <TouchableOpacity style={styles.Button} onPress={navigate1}>
+                <Text style={styles.ButtonText}>Flex Direction</Text>
+            </TouchableOpacity>
             <TouchableOpacity style={styles.Button} onPress={navigate2}>
-                <Text style={styles.ButtonText}>Einrichten der Entwicklungsumgebung</Text>
+                <Text style={styles.ButtonText}>Justify Content</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.Button} onPress={navigate3}>
-                <Text style={styles.ButtonText}>Node & Watchman</Text>
+                <Text style={styles.ButtonText}>Align Items</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.Button} onPress={navigate4}>
-                <Text style={styles.ButtonText}>Ruby</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.Button} onPress={navigate5}>
-                <Text style={styles.ButtonText}>Xcode</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.Button} onPress={navigate6}>
-                <Text style={styles.ButtonText}>Erstellen einer neuen Anwendung</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.Button} onPress={navigate7}>
-                <Text style={styles.ButtonText}>Ausführen Ihrer React Native-Anwendung</Text>
+                <Text style={styles.ButtonText}>Align Self</Text>
             </TouchableOpacity>
             </View>
         </ScrollView>
@@ -56,7 +48,7 @@ const styles = StyleSheet.create({
       backgroundColor:'#03396C'
     },
     ButtonBox:{
-        marginTop:20,
+        
         marginLeft:40,
         marginRight:40,
       },
@@ -70,6 +62,14 @@ const styles = StyleSheet.create({
         display:'flex',
         justifyContent:'center',
         alignItems:"center",
+      },
+      Fließtext:{
+        marginBottom:15,
+        marginTop:20,
+        paddingLeft:30,
+        paddingRight:30,
+        fontSize:15,
+        color:'white'
       },
    
 

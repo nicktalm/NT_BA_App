@@ -24,6 +24,7 @@ const Site4 = ({navigation})=>{
   }
   
     return(
+      <View>
         <ScrollView style={styles.TopView}>
             <View style={styles.HeadlineBox}>
             <Text style={styles.Headline}>Xcode</Text>
@@ -46,7 +47,7 @@ const Site4 = ({navigation})=>{
             Sie müssen auch die Xcode Command Line Tools installieren. Öffnen Sie Xcode und wählen Sie dann "Einstellungen" aus dem Xcode-Menü. Gehen Sie zum Bedienfeld "Speicherorte" und installieren Sie die Tools, indem Sie die neueste Version im Dropdown-Menü "Befehlszeilen-Tools" auswählen.
             </Text>
             <View style={styles.ImageStyle}>
-            <Image style={styles.ImageStyleBild} source={require('/Users/nicktalmon/Desktop/Test1/Test1/AwesomeProject/Assets/images/Xcode.png')} />
+            <Image style={styles.ImageStyleBild} source={require('../../Assets/images/Xcode.png')} />
             </View>
             <Text style={styles.FließtextHeadline}> 
             Installing an iOS Simulator in Xcode</Text>
@@ -74,7 +75,9 @@ const Site4 = ({navigation})=>{
             <Text style={styles.Fließtext}> 
             React Native hat eine eingebaute Kommandozeilenschnittstelle. Anstatt eine bestimmte Version der CLI global zu installieren und zu verwalten, empfehlen wir Ihnen, die aktuelle Version zur Laufzeit mit npx, das mit Node.js ausgeliefert wird, abzurufen. Mit npx react-native command wird die aktuelle stabile Version der CLI heruntergeladen und ausgeführt, wenn der Befehl ausgeführt wird.
             </Text>
-            <View style={styles.ForwardbuttonBox}>
+           
+        </ScrollView>
+        <View style={styles.ForwardbuttonBox}>
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate2}>
             <Icon style={styles.ArrowRightIcon} name="arrow-left" size={45} color={"#fff"}/>
             </TouchableOpacity>
@@ -85,13 +88,12 @@ const Site4 = ({navigation})=>{
             <Icon style={styles.ArrowRightIcon} name="arrow-right" size={45} color={"#fff"}/>
             </TouchableOpacity>
             </View>
-        </ScrollView>
+      </View>
     )
 }
 const styles = StyleSheet.create({
     TopView:{
-      
-      backgroundColor:'white',
+      height:Dimensions.get("window").height-210,
     },
     HeadlineBox:{
       paddingLeft:30,

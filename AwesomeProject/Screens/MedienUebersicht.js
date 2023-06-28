@@ -3,48 +3,32 @@ import { Text, StyleSheet, TouchableOpacity, View, ScrollView, Image } from "rea
 import { TextInput } from 'react-native-gesture-handler';
 import { ScreenStackHeaderRightView } from 'react-native-screens';
 import ArrowRightIcon from 'react-native-vector-icons/Feather';
+import '/Users/nicktalmon/Desktop/Test1/Test1/AwesomeProject/Assets/images/Mobi2.png';
+
 
 const Home = ({navigation})=>{
 
+  function navigate1(){
+    navigation.navigate('Bild_einbinden');
+  }
   function navigate2(){
-    navigation.navigate('Site1');
+    navigation.navigate('Video_einbinden');
   }
   function navigate3(){
-    navigation.navigate('Site2');
-  }
-  function navigate4(){
-    navigation.navigate('Site3');
-  }
-  function navigate5(){
-    navigation.navigate('Site4');
-  }
-  function navigate6(){
-    navigation.navigate('Site5');
-  }
-  function navigate7(){
-    navigation.navigate('Site6');
+    navigation.navigate('Modell3D_einbinden');
   }
   
     return(
         <ScrollView style={styles.TopView}>
            <View style={styles.ButtonBox}>
+           <TouchableOpacity style={styles.Button} onPress={navigate1}>
+                <Text style={styles.ButtonText}>Bild einbinden</Text>
+            </TouchableOpacity>
             <TouchableOpacity style={styles.Button} onPress={navigate2}>
-                <Text style={styles.ButtonText}>Einrichten der Entwicklungsumgebung</Text>
+                <Text style={styles.ButtonText}>Video einbinden</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.Button} onPress={navigate3}>
-                <Text style={styles.ButtonText}>Node & Watchman</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.Button} onPress={navigate4}>
-                <Text style={styles.ButtonText}>Ruby</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.Button} onPress={navigate5}>
-                <Text style={styles.ButtonText}>Xcode</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.Button} onPress={navigate6}>
-                <Text style={styles.ButtonText}>Erstellen einer neuen Anwendung</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.Button} onPress={navigate7}>
-                <Text style={styles.ButtonText}>Ausführen Ihrer React Native-Anwendung</Text>
+                <Text style={styles.ButtonText}>3D-Modell einbinden</Text>
             </TouchableOpacity>
             </View>
         </ScrollView>

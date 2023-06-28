@@ -24,6 +24,7 @@ const Site2 = ({navigation})=>{
   }
   
     return(
+      <View>
         <ScrollView style={styles.TopView}>
             <View style={styles.HeadlineBox}>
             <Text style={styles.Headline}>Node & Watchman</Text>
@@ -48,7 +49,8 @@ const Site2 = ({navigation})=>{
             Watchman&nbsp;
             </Text>
             ist ein Tool von Facebook zur Überwachung von Änderungen im Dateisystem. Es wird dringend empfohlen, es zu installieren, um die Leistung zu verbessern.</Text>
-            <View style={styles.ForwardbuttonBox}>
+        </ScrollView>
+        <View style={styles.ForwardbuttonBox}>
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate2}>
             <Icon style={styles.ArrowRightIcon} name="arrow-left" size={45} color={"#fff"}/>
             </TouchableOpacity>
@@ -58,14 +60,13 @@ const Site2 = ({navigation})=>{
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate}>
             <Icon style={styles.ArrowRightIcon} name="arrow-right" size={45} color={"#fff"}/>
             </TouchableOpacity>
-            </View>
-        </ScrollView>
+          </View>
+      </View>
     )
 }
 const styles = StyleSheet.create({
     TopView:{
-      
-      backgroundColor:'white',
+      height:Dimensions.get("window").height-200,
     },
     HeadlineBox:{
       paddingLeft:30,

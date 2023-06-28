@@ -24,6 +24,7 @@ const Site5 = ({navigation})=>{
   }
   
     return(
+    <View>
         <ScrollView style={styles.TopView}>
             <View style={styles.HeadlineBox}>
             <Text style={styles.Headline}>Erstellen einer{'\n'}
@@ -79,7 +80,9 @@ const Site5 = ({navigation})=>{
             <Icon style={styles.kopierTextButton} name="copy" size={35} color={"#fff"}/>
             </TouchableOpacity>
             </View>
-            <View style={styles.ForwardbuttonBox}>
+            
+        </ScrollView>
+        <View style={styles.ForwardbuttonBox}>
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate2}>
             <Icon style={styles.ArrowRightIcon} name="arrow-left" size={45} color={"#fff"}/>
             </TouchableOpacity>
@@ -90,13 +93,12 @@ const Site5 = ({navigation})=>{
             <Icon style={styles.ArrowRightIcon} name="arrow-right" size={45} color={"#fff"}/>
             </TouchableOpacity>
             </View>
-        </ScrollView>
+    </View>
     )
 }
 const styles = StyleSheet.create({
     TopView:{
-      
-      backgroundColor:'white',
+      height:Dimensions.get("window").height-210,
     },
     HeadlineBox:{
         paddingLeft:30,

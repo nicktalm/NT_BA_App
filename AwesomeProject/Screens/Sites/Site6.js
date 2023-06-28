@@ -14,7 +14,7 @@ const Site6 = ({navigation})=>{
     navigation.navigate('Site2');
   }*/
   function navigate(){
-    navigation.navigate('Site7');
+    navigation.navigate('Home');
   }
   function navigate2(){
     navigation.navigate('Site5');
@@ -24,6 +24,7 @@ const Site6 = ({navigation})=>{
   }
   
     return(
+      <View>
         <ScrollView style={styles.TopView}>
             <View style={styles.HeadlineBox}>
             <Text style={styles.Headline}>Ausführen Ihrer{'\n'}
@@ -68,12 +69,14 @@ const Site6 = ({navigation})=>{
             Sie sollten Ihre neue App in Kürze im iOS-Simulator ausführen können.
             </Text>
             <View style={styles.ImageStyle}>
-            <Image style={styles.ImageStyleBild} source={require('/Users/nicktalmon/Desktop/Test1/Test1/AwesomeProject/Assets/images/ReactNativeiPhone.png')} />
+            <Image style={styles.ImageStyleBild} source={require('../../Assets/images/ReactNativeiPhone.png')} />
             </View>
             <Text style={styles.Fließtext}> 
             npx react-native run-ios ist eine Möglichkeit, Ihre App auszuführen. Sie können sie auch direkt in Xcode ausführen.
             </Text>
-            <View style={styles.ForwardbuttonBox}>
+            
+        </ScrollView>
+        <View style={styles.ForwardbuttonBox}>
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate2}>
             <Icon style={styles.ArrowRightIcon} name="arrow-left" size={45} color={"#fff"}/>
             </TouchableOpacity>
@@ -84,13 +87,12 @@ const Site6 = ({navigation})=>{
             <Icon style={styles.ArrowRightIcon} name="arrow-right" size={45} color={"#fff"}/>
             </TouchableOpacity>
             </View>
-        </ScrollView>
+      </View>
     )
 }
 const styles = StyleSheet.create({
     TopView:{
-      
-      backgroundColor:'white',
+      height:Dimensions.get("window").height-210,
     },
     HeadlineBox:{
         paddingLeft:30,
@@ -152,8 +154,8 @@ const styles = StyleSheet.create({
       resizeMode:'contain',
     },
     ImageStyleBild:{
-        width:Dimensions.get("window").width,
-        height:Dimensions.get("window").width,
+      width:Dimensions.get("window").width,
+      height:Dimensions.get("window").width,
       resizeMode:'contain',
       marginTop:80,
       marginBottom:80

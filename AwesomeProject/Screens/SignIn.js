@@ -2,12 +2,20 @@ import React from 'react';
 import { Text, StyleSheet, Button, View, Image, TouchableOpacity, } from "react-native";
 import { TextInput } from 'react-native-gesture-handler';
 import { ScreenStackHeaderRightView } from 'react-native-screens';
-import '../Assets/images/Mobi2.png';
+import { useState } from 'react';
 
 const SignIn = ({navigation})=>{
+  const [email, onEmailChange]=React.useState("");
+  const [password, onPasswordChange]=React.useState("");
+
+  const [errorMsg, onErrorMsgChange]=React.useState("");
 
   function navigate(){
-    navigation.navigate('Home');
+    if(email==="Admin"&&password==="Admin"){
+    onErrorMsgChange("");
+      navigation.navigate('Home');
+  }
+    else{onErrorMsgChange("Falsche Eingabe")}
   }
   function navigate2(){
     navigation.navigate('SignUp');
@@ -24,8 +32,11 @@ const SignIn = ({navigation})=>{
                 BACK
                 </Text>
                 <View style={styles.FormView}>
-                  <TextInput placeholder={"Email adress*"} placeholderTextColor="#fff" style={styles.TextInput}></TextInput>
-                  <TextInput placeholder={"Password*"} secureTextEntry={true} placeholderTextColor="#fff" style={styles.TextInput}></TextInput>
+                  <TextInput onChangeText={onEmailChange} placeholder={"Email adress*"} placeholderTextColor="#fff" style={styles.TextInput}></TextInput>
+                  <TextInput onChangeText={onPasswordChange} placeholder={"Password*"} secureTextEntry={true} placeholderTextColor="#fff" style={styles.TextInput}></TextInput>
+                  <Text>
+                    {errorMsg}
+                  </Text>
                   <TouchableOpacity style={styles.Button} onPress={navigate}>
                     <Text style={styles.ButtonText}>
                       Sign in

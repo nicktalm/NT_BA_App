@@ -9,53 +9,31 @@ import { Linking } from 'react-native';
 
 const Site1 = ({navigation})=>{
 
-  function navigate(){
-    navigation.navigate('Site2');
-  }
-  function navigate2(){
-    navigation.navigate('Home');
-  }
-  function navigate3(){
-    navigation.navigate('Home');
-  }
-
     return(
-      <View>
         <ScrollView style={styles.TopView}>
             <View style={styles.HeadlineBox}>
-            <Text style={styles.Headline}>Einrichten der{'\n'}
-            Entwicklungsumgebung</Text>
+            <Text style={styles.Headline}>Über mich</Text>
             </View>
-            <Text style={styles.Fließtext}>Dieses Tutorial hilft Ihnen bei der Installation und Erstellung Ihrer ersten React Native App.</Text>
-            <Text style={styles.Fließtext}>React Native wird von vielen verschiedenen Personen genutzt: von fortgeschrittenen iOS-Entwicklern über React-Anfänger bis hin zu Personen, die zum ersten Mal in ihrer Karriere mit der Programmierung beginnen. Diese Tutorial wurden für alle Lernenden geschrieben, unabhängig von ihrem Erfahrungsstand oder Hintergrund.</Text>
-            <Text style={styles.Fließtext}>Wir werden mit React Native CLI arbeiten. Für den Start ist Xcode erforderlich. Wenn Sie bereits eines dieser Tools installiert haben, sollten Sie in der Lage sein, innerhalb weniger Minuten loszulegen. Wenn sie nicht installiert sind, sollten Sie etwa eine Stunde für die Installation und Konfiguration einplanen.</Text>
-            <Text style={styles.Fließtext}>In diesem Tutorial geht es um eine Entwicklung mit einem MacOS Gerät für ein iOS Gerät.</Text>
-            
+            <Text style={styles.Fließtext}>Auf dieser Unterseite der App finden Sie eine kleine Vorstellung des Entwicklers dieser App:</Text>
+            <Text style={styles.Fließtext}></Text>
+            <Text style={styles.Fließtext}>Hallo zusammen,</Text>
+            <Text style={styles.Fließtext}>mein Name ist Nick Talmon, ich bin zum aktuellen Zeitpunkt 23 Jahre alt und studieren Kommunikation und Medienmanagement an der Hochschule Karlsruhe.</Text>
+            <Text style={styles.Fließtext}>Diese App ist im Rahmen meiner Bachelorarbeit im Sommersemester 2023 unter der Betreueung von Herr Professor Schober entstanden und soll zuküftigen Studenten dabei helfen ein React Native-Projekt zu starten.</Text> 
+            <Text style={styles.Fließtext}>In der App wird ebenfalls erkärt, wie man mit Bildern, Videos und 3D-Modellen arbeitet und diese verwenden kann. Dazu gibt es zusätzlich einen kleinen Testbereich in dem man verschiedene Attribute ausprobieren kann und sofort sieht, wie diese sich auf die betroffenen Elemente auswirken.</Text>  
+            <Text style={styles.Fließtext}>Wenn Sie gerade diese App von Herr Schober zur Verfügung gestellt bekommen haben und noch Fragen haben können Sie sich gerne jederzeit bei mir unter meiner privaten Email-Adresse melden: nicktalmon@yahoo.de</Text>
+            <Text style={styles.Fließtext}>Sonst wünsche ich Ihnen weiterhin Viel Erfolg mit React Native und eine Gute Zukunft.</Text>
+            <Text style={styles.Fließtext}>Nick Talmon</Text>
         </ScrollView>
-        <View style={styles.ForwardbuttonBox}>
-            <TouchableOpacity style={styles.Forwardbutton} onPress={navigate2}>
-            <Icon style={styles.ArrowRightIcon} name="arrow-left" size={40} color={"#fff"}/>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.Forwardbutton} onPress={navigate3}>
-            <Icon style={styles.ArrowRightIcon} name="home" size={40} color={"#fff"}/>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.Forwardbutton} onPress={navigate}>
-            <Icon style={styles.ArrowRightIcon} name="arrow-right" size={40} color={"#fff"}/>
-            </TouchableOpacity>
-            </View>
-      </View>
     )
 }
 const styles = StyleSheet.create({
     TopView:{
-      height:Dimensions.get("window").height-220,
     },
     HeadlineBox:{
       paddingLeft:30,
       paddingRight:10,
       height:50,
       marginTop:20,
-      height:100,
     },
     Headline:{
       fontSize:28,
@@ -97,6 +75,7 @@ const styles = StyleSheet.create({
     },
     ImageStyle:{
       marginTop:20,
+      marginBottom:20,
       width:'50%',
       resizeMode:'contain',
       marginLeft:30,

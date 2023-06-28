@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import { Dimensions } from 'react-native';
 import { copyToClipBoard } from '../../function';
 import { Linking } from 'react-native';
+import Video from 'react-native-video';
 
 const Site3 = ({navigation})=>{
 
@@ -24,6 +25,7 @@ const Site3 = ({navigation})=>{
   }
   
     return(
+      <View>
         <ScrollView style={styles.TopView}>
             <View style={styles.HeadlineBox}>
             <Text style={styles.Headline}>Ruby</Text>
@@ -46,13 +48,28 @@ const Site3 = ({navigation})=>{
             <Icon style={styles.kopierTextButton} name="copy" size={35} color={"#fff"}/>
             </TouchableOpacity>
             </View>
+            <View style={styles.video}>
+            <Video  source={{uri:'../../Assets/videos/TestVideo2.mp4'}}
+            ref={(ref) => {
+              this.player = ref
+            }}                                      // Store reference
+            onBuffer={this.onBuffer}                // Callback when remote video is buffering
+            onError={this.videoError}               // Callback when video cannot be loaded
+            style={styles.backgroundVideo}
+            controls={true} 
+            paused={true}
+            />
+            </View>
             <Text style={styles.Fließtext}> 
             React Native verwendet&nbsp;
             <Text style={{color: '#03396C',}} onPress={() => Linking.openURL('https://github.com/facebook/react-native/blob/v0.71.3/.ruby-version')}>
             diese Version&nbsp;
             </Text>von Ruby. Sie können die Version, die Ihr spezifisches Projekt benötigt, auch in der Datei .ruby-version im Stammverzeichnis Ihres ReactNative-Projekts finden.
             </Text>
-            <View style={styles.ForwardbuttonBox}>
+            
+        </ScrollView>
+        
+        <View style={styles.ForwardbuttonBox}>
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate2}>
             <Icon style={styles.ArrowRightIcon} name="arrow-left" size={45} color={"#fff"}/>
             </TouchableOpacity>
@@ -62,17 +79,13 @@ const Site3 = ({navigation})=>{
             <TouchableOpacity style={styles.Forwardbutton} onPress={navigate}>
             <Icon style={styles.ArrowRightIcon} name="arrow-right" size={45} color={"#fff"}/>
             </TouchableOpacity>
-            </View>
-            <View style={styles.ImageStyle}>
-            <Image style={styles.ImageStyleBild} source={require('/Users/nicktalmon/Desktop/Test1/Test1/AwesomeProject/Assets/images/LogoApp.png')} />
-            </View>
-        </ScrollView>
+          </View>
+      </View>
     )
 }
 const styles = StyleSheet.create({
     TopView:{
-      
-      backgroundColor:'white',
+      height:Dimensions.get("window").height-200,
     },
     HeadlineBox:{
       paddingLeft:30,
@@ -103,7 +116,7 @@ const styles = StyleSheet.create({
         paddingLeft:30,
         paddingRight:30,
         marginLeft:10,
-        marginRight:10
+        marginRight:10,
       },
       Forwardbutton:{
         width:'25%',
@@ -126,7 +139,7 @@ const styles = StyleSheet.create({
     ImageStyleBild:{
         width:Dimensions.get("window").width-60,
         height:Dimensions.get("window").width-60,
-      resizeMode:'contain'
+        resizeMode:'contain'
     },
     kopierTextBox:{
         marginTop:10,
@@ -140,9 +153,9 @@ const styles = StyleSheet.create({
         borderRadius:10,
         marginBottom:20,
         paddingLeft:20,
-      paddingRight:20,
-      marginLeft:20,
-      marginRight:20
+        paddingRight:20,
+        marginLeft:20,
+        marginRight:20
       },
       kopierText:{
         color:'white',
@@ -152,6 +165,19 @@ const styles = StyleSheet.create({
       kopierTextButton:{
         marginRight:0,
         marginTop:3.5,
-      }
+      },
+      backgroundVideo:{
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+      },
+      video:{
+        width:Dimensions.get("window").width-60,
+        height:(Dimensions.get("window").width-60)/(16/9),
+        marginLeft:30,
+        marginBottom:30,
+      },
   })
 export default Site3;
