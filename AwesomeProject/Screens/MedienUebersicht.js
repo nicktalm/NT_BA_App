@@ -3,7 +3,7 @@ import { Text, StyleSheet, TouchableOpacity, View, ScrollView, Image } from "rea
 import { TextInput } from 'react-native-gesture-handler';
 import { ScreenStackHeaderRightView } from 'react-native-screens';
 import ArrowRightIcon from 'react-native-vector-icons/Feather';
-import '/Users/nicktalmon/Desktop/Test1/Test1/AwesomeProject/Assets/images/Mobi2.png';
+
 
 
 const Home = ({navigation})=>{

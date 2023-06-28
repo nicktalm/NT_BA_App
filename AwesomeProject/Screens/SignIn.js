@@ -15,7 +15,7 @@ const SignIn = ({navigation})=>{
     onErrorMsgChange("");
       navigation.navigate('Home');
   }
-    else{onErrorMsgChange("Falsche Eingabe")}
+    else{onErrorMsgChange("!Falsche Eingabe!")}
   }
   function navigate2(){
     navigation.navigate('SignUp');
@@ -34,7 +34,7 @@ const SignIn = ({navigation})=>{
                 <View style={styles.FormView}>
                   <TextInput onChangeText={onEmailChange} placeholder={"Email adress*"} placeholderTextColor="#fff" style={styles.TextInput}></TextInput>
                   <TextInput onChangeText={onPasswordChange} placeholder={"Password*"} secureTextEntry={true} placeholderTextColor="#fff" style={styles.TextInput}></TextInput>
-                  <Text>
+                  <Text style={styles.Fehler}>
                     {errorMsg}
                   </Text>
                   <TouchableOpacity style={styles.Button} onPress={navigate}>
@@ -51,6 +51,11 @@ const SignIn = ({navigation})=>{
     )
 }
 const styles = StyleSheet.create({
+    Fehler:{
+      color:'red',
+      fontWeight:'bold',
+      marginTop:20
+    },
     mainView:{
       marginTop:40,
       flex:1,
@@ -81,7 +86,7 @@ const styles = StyleSheet.create({
       fontSize:40,
       fontWeight:'bold',
       marginLeft:30,
-      marginTop:60,
+      marginTop:40,
     },
     FormView:{
       width:'100%',
