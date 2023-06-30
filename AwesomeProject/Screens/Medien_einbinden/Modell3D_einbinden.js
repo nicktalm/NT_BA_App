@@ -6,7 +6,6 @@ import Icon from 'react-native-vector-icons/Feather';
 import { Dimensions } from 'react-native';
 import { copyToClipBoard } from '../../function';
 import { Linking } from 'react-native';
-import ModelView from 'react-native-gl-model-view';
 
 const Site1 = ({navigation})=>{
 
@@ -15,6 +14,7 @@ const Site1 = ({navigation})=>{
             <View style={styles.HeadlineBox}>
             <Text style={styles.Headline}>3D Modell einbinden</Text>
             </View>
+
             <Text style={styles.Fließtext}>Dieses Tutorial hilft Ihnen bei der Installation und Erstellung Ihrer ersten React Native App.</Text>
             <Text style={styles.Fließtext}>React Native wird von vielen verschiedenen Personen genutzt: von fortgeschrittenen iOS-Entwicklern über React-Anfänger bis hin zu Personen, die zum ersten Mal in ihrer Karriere mit der Programmierung beginnen. Diese Tutorial wurden für alle Lernenden geschrieben, unabhängig von ihrem Erfahrungsstand oder Hintergrund.</Text>
             <Text style={styles.Fließtext}>Wir werden mit React Native CLI arbeiten. Für den Start ist Xcode erforderlich. Wenn Sie bereits eines dieser Tools installiert haben, sollten Sie in der Lage sein, innerhalb weniger Minuten loszulegen. Wenn sie nicht installiert sind, sollten Sie etwa eine Stunde für die Installation und Konfiguration einplanen.</Text>

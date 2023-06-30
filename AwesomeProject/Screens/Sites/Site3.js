@@ -48,18 +48,7 @@ const Site3 = ({navigation})=>{
             <Icon style={styles.kopierTextButton} name="copy" size={35} color={"#fff"}/>
             </TouchableOpacity>
             </View>
-            <View style={styles.video}>
-            <Video  source={{uri:'../../Assets/videos/TestVideo2.mp4'}}
-            ref={(ref) => {
-              this.player = ref
-            }}                                      // Store reference
-            onBuffer={this.onBuffer}                // Callback when remote video is buffering
-            onError={this.videoError}               // Callback when video cannot be loaded
-            style={styles.backgroundVideo}
-            controls={true} 
-            paused={true}
-            />
-            </View>
+           
             <Text style={styles.Fließtext}> 
             React Native verwendet&nbsp;
             <Text style={{color: '#03396C',}} onPress={() => Linking.openURL('https://github.com/facebook/react-native/blob/v0.71.3/.ruby-version')}>

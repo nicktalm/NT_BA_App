@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/Feather';
 import { Dimensions } from 'react-native';
 import { copyToClipBoard } from '../../function';
 import { Linking } from 'react-native';
+import Video from 'react-native-video';
 
 const Site1 = ({navigation})=>{
 
@@ -14,6 +15,19 @@ const Site1 = ({navigation})=>{
             <View style={styles.HeadlineBox}>
             <Text style={styles.Headline}>Video einbinden</Text>
             </View>
+            <View style={styles.video}>
+            <Video  source={{uri:'/Users/nicktalmon/Desktop/Test1/Test1/AwesomeProject/Assets/videos/Videobeispiel2.mp4'}}
+            ref={(ref) => {
+              this.player = ref
+            }}                                      // Store reference
+            onBuffer={this.onBuffer}                // Callback when remote video is buffering
+            onError={this.videoError}               // Callback when video cannot be loaded
+            style={styles.backgroundVideo}
+            controls={true} 
+            paused={true}
+            />
+            </View>
+            <Text style={styles.Fließtext}>Das ist ein Beispielvideo</Text>
             <Text style={styles.Fließtext}>Um eine Video-Datei in ein React Native-Projekt einbinden zu können, muss man erst das „react-native-video“-Paket mit folgendem Befehl in der Kommandozentrale installieren.</Text>
             <View style={styles.kopierTextBox}>
             <Text style={styles.kopierText}>
@@ -130,6 +144,19 @@ const styles = StyleSheet.create({
     kopierTextButton:{
       marginRight:0,
       marginTop:3.5,
+    },
+    backgroundVideo:{
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      bottom: 0,
+      right: 0,
+    },
+    video:{
+      width:Dimensions.get("window").width-60,
+      height:(Dimensions.get("window").width-60)/(16/9),
+      marginLeft:30,
+      marginBottom:10,
     },
   })
 export default Site1;
