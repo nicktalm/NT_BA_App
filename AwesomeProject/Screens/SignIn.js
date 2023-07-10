@@ -1,8 +1,6 @@
 import React from 'react';
-import { Text, StyleSheet, Button, View, Image, TouchableOpacity, } from "react-native";
+import { Text, StyleSheet, Button, View, Image, TouchableOpacity, ScrollView } from "react-native";
 import { TextInput } from 'react-native-gesture-handler';
-import { ScreenStackHeaderRightView } from 'react-native-screens';
-import { useState } from 'react';
 
 const SignIn = ({navigation})=>{
   const [email, onEmailChange]=React.useState("");
@@ -11,7 +9,7 @@ const SignIn = ({navigation})=>{
   const [errorMsg, onErrorMsgChange]=React.useState("");
 
   function navigate(){
-    if(email==="Admin"&&password==="Admin"){
+    if(email==="Admin@h-ka.de"&&password==="Admin"){
     onErrorMsgChange("");
       navigation.navigate('Home');
   }
@@ -28,23 +26,30 @@ const SignIn = ({navigation})=>{
             </View>
             <View style={styles.BottomView}>
                 <Text style={styles.Heading}>
-                WELCOME{'\n'}
-                BACK
+                WILLKOMMEN{'\n'}
+                ZURÜCK
                 </Text>
                 <View style={styles.FormView}>
-                  <TextInput onChangeText={onEmailChange} placeholder={"Email adress*"} placeholderTextColor="#fff" style={styles.TextInput}></TextInput>
-                  <TextInput onChangeText={onPasswordChange} placeholder={"Password*"} secureTextEntry={true} placeholderTextColor="#fff" style={styles.TextInput}></TextInput>
+                  <TextInput onChangeText={onEmailChange} 
+                  placeholder={"E-Mail-Adresse*"} placeholderTextColor="#fff" 
+                  style={styles.TextInput}>
+                  </TextInput>
+                  
+                  <TextInput onChangeText={onPasswordChange} 
+                  placeholder={"Passwort*"} secureTextEntry={true} placeholderTextColor="#fff" 
+                  style={styles.TextInput}>
+                  </TextInput>
                   <Text style={styles.Fehler}>
                     {errorMsg}
                   </Text>
                   <TouchableOpacity style={styles.Button} onPress={navigate}>
                     <Text style={styles.ButtonText}>
-                      Sign in
+                      Anmelden
                     </Text>
                   </TouchableOpacity>
                 </View>
                   <TouchableOpacity style={styles.TextButton} onPress={navigate2}>
-                    <Text style={styles.SignUpText}>Sign up</Text>
+                    <Text style={styles.SignUpText}>Registrieren</Text>
                   </TouchableOpacity>
             </View>
         </View>

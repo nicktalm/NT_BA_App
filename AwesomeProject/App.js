@@ -30,20 +30,20 @@ const App: () => Node = () => {
     <NavigationContainer>
     <Stack.Navigator>
       <Stack.Screen name="SignIn" component={SignIn} options={{headerShown:false}} />
-      <Stack.Screen name="SignUp" component={SignUp} options={{headerShown:false}}/>
-      <Stack.Screen name="Site1" component={Site1} options={{headerShown:true, title:'Seite 1', headerTintColor:'white',
+      <Stack.Screen name="SignUp" component={SignUp} options={{headerShown:false, gestureEnabled:false}}/>
+      <Stack.Screen name="Site1" component={Site1} options={{headerShown:true,  gestureEnabled:false, title:'Seite 1', headerTintColor:'white',
             headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:false}} />
-      <Stack.Screen name="Site2" component={Site2} options={{headerShown:true, title:'Seite 2', headerTintColor:'white',
+      <Stack.Screen name="Site2" component={Site2} options={{headerShown:true, gestureEnabled:false, title:'Seite 2', headerTintColor:'white',
             headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:false}} />
-      <Stack.Screen name="Site3" component={Site3} options={{headerShown:true, title:'Seite 3', headerTintColor:'white',
+      <Stack.Screen name="Site3" component={Site3} options={{headerShown:true, gestureEnabled:false, title:'Seite 3', headerTintColor:'white',
             headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:false}} />
-      <Stack.Screen name="Site4" component={Site4} options={{headerShown:true, title:'Seite 4', headerTintColor:'white',
+      <Stack.Screen name="Site4" component={Site4} options={{headerShown:true, gestureEnabled:false, title:'Seite 4', headerTintColor:'white',
             headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:false}} />
-      <Stack.Screen name="Site5" component={Site5} options={{headerShown:true, title:'Seite 5', headerTintColor:'white',
+      <Stack.Screen name="Site5" component={Site5} options={{headerShown:true, gestureEnabled:false, title:'Seite 5', headerTintColor:'white',
             headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:false}} />
-      <Stack.Screen name="Site6" component={Site6} options={{headerShown:true, title:'Seite 6', headerTintColor:'white',
+      <Stack.Screen name="Site6" component={Site6} options={{headerShown:true, gestureEnabled:false, title:'Seite 6', headerTintColor:'white',
             headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:false}} />
-      <Stack.Screen name="Home" component={Home} options={{headerShown:true, title:'Home', headerTintColor:'white',
+      <Stack.Screen name="Home" component={Home} options={{headerShown:true, gestureEnabled:false, title:'Home', headerTintColor:'white',
             headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:false}} />
       <Stack.Screen name="Uebersicht" component={Uebersicht} options={{headerShown:true, title:'Übersicht', headerTintColor:'white',
             headerStyle: {backgroundColor: '#6788a6',},headerBackVisible:true}} />

@@ -1,8 +1,6 @@
 import React from 'react';
 import { Text, StyleSheet, TouchableOpacity, View, ScrollView, Image } from "react-native";
-import { TextInput } from 'react-native-gesture-handler';
-import { ScreenStackHeaderRightView } from 'react-native-screens';
-import ArrowRightIcon from 'react-native-vector-icons/Feather';
+
 
 const Home = ({navigation})=>{
 

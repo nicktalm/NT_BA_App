@@ -1,11 +1,8 @@
 import React from 'react';
 import { Text, StyleSheet, TouchableOpacity, View, ScrollView, Image } from "react-native";
-import { TextInput } from 'react-native-gesture-handler';
-import { ScreenStackHeaderRightView } from 'react-native-screens';
 import Icon from 'react-native-vector-icons/Feather';
 import { Dimensions } from 'react-native';
 import { copyToClipBoard } from '../../function';
-import { Linking } from 'react-native';
 import Video from 'react-native-video';
 
 const Site1 = ({navigation})=>{
@@ -47,7 +44,7 @@ const Site1 = ({navigation})=>{
             </View>
             <Text style={styles.Fließtext}>Der Pfad kann ebenso zu einem Unterordner führen, wie man im oberen Kapitel zu den Bildern sieht. Auch hier muss man auf Groß- und Kleinschreibung achten.</Text>
             <Text style={styles.Fließtext}>Im Gegensatz zum Einbinden von Bildern, bietet das „react-native-video“-Paket bei der „Video“-Komponente viele weitere Optionen und Möglichkeiten zur Steuerung des Videos, wie z.B. die Möglichkeit, Wiedergabesteuerungen hinzuzufügen, das Video in Schleife abzuspielen oder Ereignisse zu überwachen.</Text>  
-            <Text style={styles.Fließtext}>Es gibt auch beim Einbinden von Videos mehrere Möglichkeiten, je nach An-forderung der App gibt es mehrere Ansätze, die man berücksichtigen sollte.</Text>
+            <Text style={styles.Fließtext}>Es gibt auch beim Einbinden von Videos mehrere Möglichkeiten, je nach Anforderung der App gibt es mehrere Ansätze, die man berücksichtigen sollte.</Text>
             <Text style={styles.Fließtext}></Text>
         </ScrollView>
     )

@@ -1,11 +1,6 @@
 import React from 'react';
 import { Text, StyleSheet, TouchableOpacity, View, ScrollView, Image } from "react-native";
-import { TextInput } from 'react-native-gesture-handler';
-import { ScreenStackHeaderRightView } from 'react-native-screens';
-import Icon from 'react-native-vector-icons/Feather';
 import { Dimensions } from 'react-native';
-import { copyToClipBoard } from '../../function';
-import { Linking } from 'react-native';
 
 const Site1 = ({navigation})=>{
 

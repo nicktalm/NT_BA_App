@@ -1,11 +1,7 @@
 import React from 'react';
-import { Text, StyleSheet, TouchableOpacity, View, ScrollView, Image } from "react-native";
-import { TextInput } from 'react-native-gesture-handler';
-import { ScreenStackHeaderRightView } from 'react-native-screens';
-import Icon from 'react-native-vector-icons/Feather';
+import { Text, StyleSheet, View, ScrollView, Image } from "react-native";
 import { Dimensions } from 'react-native';
-import { copyToClipBoard } from '../../function';
-import { Linking } from 'react-native';
+
 
 const Site1 = ({navigation})=>{
 
@@ -15,7 +11,7 @@ const Site1 = ({navigation})=>{
             <Text style={styles.Headline}>Bild einbinden</Text>
             </View>
             <Text style={styles.Fließtext}>Um ein Bild in React Native einzubinden, muss es im Projektverzeichnis deines Projektes vorhanden sein. Im besten Fall sollte das Bild im „asset“-Ordner abliegen.</Text>
-            <Text style={styles.Fließtext}>Die nötige Komponente von React Native muss am Anfang der Datei impor-tiert werden. Dies könnte beispielsweise so aussehen:</Text>
+            <Text style={styles.Fließtext}>Die nötige Komponente von React Native muss am Anfang der Datei importiert werden. Dies könnte beispielsweise so aussehen:</Text>
             <View style={styles.ImageStyle}>
             <Image style={styles.ImageStyleBild} source={require('../../Assets/images/Scrennshots/Bild_1.png')} />
             </View>
@@ -23,11 +19,11 @@ const Site1 = ({navigation})=>{
             <View style={styles.ImageStyle2}>
             <Image style={styles.ImageStyleBild} source={require('../../Assets/images/Scrennshots/Bild_2.png')} />
             </View>
-            <Text style={styles.Fließtext}>In diesem Beispiel wird das Bild „meinBild.jpg“ aus dem „asset“-Ordner einge-bunden. Falls das Bild beispielsweise in einem Unterordner „Bilder“ liegt, könnte der Pfad folgendermaßen angegeben werden:</Text>
+            <Text style={styles.Fließtext}>In diesem Beispiel wird das Bild „meinBild.jpg“ aus dem „asset“-Ordner eingebunden. Falls das Bild beispielsweise in einem Unterordner „Bilder“ liegt, könnte der Pfad folgendermaßen angegeben werden:</Text>
             <View style={styles.ImageStyle2}>
             <Image style={styles.ImageStyleBild} source={require('../../Assets/images/Scrennshots/Bild_3.png')} />
             </View>
-            <Text style={styles.Fließtext}>Der Pfad, beim Verwenden der „require“-Funktion, muss genau mit dem Da-teinamen übereinstimmen. Auch auf Groß- und Kleinschreibung muss man achten.</Text>  
+            <Text style={styles.Fließtext}>Der Pfad, beim Verwenden der „require“-Funktion, muss genau mit dem Dateinamen übereinstimmen. Auch auf Groß- und Kleinschreibung muss man achten.</Text>  
             <Text style={styles.Fließtext}>Es gibt noch weitere Möglichkeiten Bilder in React Native einzubinden, z.B. mit einer Remote-URL. Die Vorgehensweise hängt von den Anforderungen des Projektes ab.</Text>
             <Text style={styles.Fließtext}></Text>
         </ScrollView>

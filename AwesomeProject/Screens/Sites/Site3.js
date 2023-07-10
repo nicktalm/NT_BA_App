@@ -1,12 +1,10 @@
 import React from 'react';
 import { Text, StyleSheet, TouchableOpacity, View, ScrollView, Image } from "react-native";
-import { TextInput } from 'react-native-gesture-handler';
-import { ScreenStackHeaderRightView } from 'react-native-screens';
 import Icon from 'react-native-vector-icons/Feather';
 import { Dimensions } from 'react-native';
 import { copyToClipBoard } from '../../function';
 import { Linking } from 'react-native';
-import Video from 'react-native-video';
+
 
 const Site3 = ({navigation})=>{
 
@@ -44,8 +42,10 @@ const Site3 = ({navigation})=>{
             <Text style={styles.kopierText}>
             ruby --version
             </Text>
-            <TouchableOpacity style={styles.kopierTextButton} onPress={copyToClipBoard.bind(this,"ruby --version")}>
-            <Icon style={styles.kopierTextButton} name="copy" size={35} color={"#fff"}/>
+            <TouchableOpacity style={styles.kopierTextButton} 
+              onPress={copyToClipBoard.bind(this,"ruby --version")}>
+                <Icon style={styles.kopierTextButton} 
+                name="copy" size={35} color={"#fff"}/>
             </TouchableOpacity>
             </View>
            
